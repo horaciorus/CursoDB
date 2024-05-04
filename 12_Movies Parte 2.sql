@@ -1,23 +1,3 @@
-USE emarket;
-
-SELECT COUNT(*)
-FROM facturas
-WHERE EmpleadoID =6;
-
-SELECT avg(preciounitario)
-FROM productos;
-
-SELECT ROUND (AVG(preciounitario),1) AS promedio_precio
-FROM productos
-WHERE categoriaid= 6;
-
-SELECT sum(unidadesstock)
-FROM productos
-WHERE preciounitario >10
-AND categoriaid =3;
-
-SELECT MIN(preciounitario), avg(preciounitario), max(preciounitario)
-FROM productos;
 
 # Having
 SELECT pais, COUNT(clienteid)
@@ -26,7 +6,7 @@ GROUP BY pais
 HAVING COUNT(clienteid)>=3;
 
 
-#Consignas
+#Consignas Consultas DB Movies Group By y Having
 
 #Cuántas películas hay?
 SELECT COUNT(*) 
