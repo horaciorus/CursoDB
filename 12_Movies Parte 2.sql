@@ -41,10 +41,10 @@ HAVING SUM(awards) > 5;
 
 
 #Encuentra los géneros que tienen las películas con un promedio de calificación mayor a 6.0.
-SELECT name, AVG(ranking) AS promedio_calificacion
-FROM genres
-GROUP BY name
-HAVING AVG(ranking) > 6.0;
+SELECT genre_id, AVG (rating) AS Promedio
+FROM movies
+GROUP BY genre_id
+HAVING Promedio > 6.0;
 
 #Encuentra los géneros que tienen al menos 3 películas.
 SELECT genre_id, COUNT(*) AS cantidad_peliculas
